@@ -94,6 +94,9 @@ RUN mkdir -p /app
 WORKDIR /app
 COPY . /app
 
+
+
+
 # Enable the ext-zip extension
 RUN docker-php-ext-install zip
 
