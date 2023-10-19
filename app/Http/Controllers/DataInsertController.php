@@ -46,7 +46,7 @@ class DataInsertController extends Controller
             }
 
             $image = clone $template; // Clone the template for each image
-
+            dd($jsonData);
             $data = '';
 
             foreach ($item as $key => $value) {
