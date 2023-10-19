@@ -30,7 +30,7 @@ class DataInsertController extends Controller
 
         // Read the JSON data
 
-        $jsonPath = Storage::disk('public')->path('data.json');
+        $jsonPath = Storage::disk('app/public')->path('data.json');
         $jsonData = json_decode(file_get_contents($jsonPath), true);
 
         if (!is_array($jsonData)) {
