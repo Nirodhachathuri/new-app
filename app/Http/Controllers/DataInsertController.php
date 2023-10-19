@@ -41,7 +41,7 @@ class DataInsertController extends Controller
 
         // Loop to create and save 500 images
         foreach ($jsonData as $item) {
-            if ($counter > 500) {
+            if ($counter > 100) {
                 break; // Stop after generating 500 images
             }
 
