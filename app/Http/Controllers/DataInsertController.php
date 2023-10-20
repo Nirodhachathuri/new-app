@@ -17,7 +17,7 @@ class DataInsertController extends Controller
         // Define the font path
         $fontPath = public_path('times.ttf');
 
-        $jsonPath = Storage::disk('public')->path('data.json');
+        $jsonPath = public_path('data.json');
         $jsonData = json_decode(file_get_contents($jsonPath), true);
 
 
