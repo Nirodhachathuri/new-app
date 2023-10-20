@@ -63,7 +63,7 @@ class ExcelImportController extends Controller
                 // $dataPath = storage_path('/../public/storage/data.json');
                 // file_put_contents($dataPath, $json);
 
-                $dataPath = storage_path('app/public/storage/data.json'); // Define the correct path
+                $dataPath = storage_path('data.json'); // Define the correct path
                 file_put_contents($dataPath, $json);
 
                 return view('show',['jsonData' => $json]);
