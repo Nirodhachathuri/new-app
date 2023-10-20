@@ -17,6 +17,10 @@ class DataInsertController extends Controller
         // Define the font path
         $fontPath = public_path('times.ttf');
 
+        $jsonPath = Storage::disk('public')->path('data.json');
+        $jsonData = json_decode(file_get_contents($jsonPath), true);
+
+
         // Load the template image
         // $templatePath = storage_path('template.jpeg');
         $template = Image::make('/app/public/storage/template.jpeg');
@@ -30,9 +34,7 @@ class DataInsertController extends Controller
 
         // Read the JSON data
 
-        $jsonPath = Storage::disk('public')->path('data.json');
-        $jsonData = json_decode(file_get_contents($jsonPath), true);
-
+        
         if (!is_array($jsonData)) {
             return 'JSON data could not be loaded or is not in the correct format.';
         }
