@@ -33,7 +33,7 @@ class ImageController extends Controller
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = 'template.' . $image->getClientOriginalExtension(); // Ensure the saved image has the correct extension
-            storage_path($imageName); // Save with the specified name and in the public disk
+            $path = $image->storage('', $imageName, 'public'); // Save with the specified name and in the public disk
             // Store the file in the public disk (or other configured disk).
             return redirect()->route('excel-upload')->with('success', 'Image uploaded successfully.');
  
