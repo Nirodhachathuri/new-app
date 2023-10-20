@@ -17,7 +17,7 @@ class DataInsertController extends Controller
         // Define the font path
         $fontPath = public_path('times.ttf');
 
-        $jsonPath = public_path('data.json');
+        $jsonPath = public_path('/storage/data.json');
         $jsonData = json_decode(file_get_contents($jsonPath), true);
 
 
