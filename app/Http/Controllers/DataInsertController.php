@@ -18,7 +18,7 @@ class DataInsertController extends Controller
         $fontPath = public_path('times.ttf');
 
         // Load the template image
-        $templatePath = Storage::disk('public')->path('template.jpeg');
+        $templatePath = storage_path('template.jpeg');
         $template = Image::make($templatePath);
 
         // Define the directory where the images will be saved
