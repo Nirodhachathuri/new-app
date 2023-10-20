@@ -66,9 +66,9 @@ class ExcelImportController extends Controller
                 $dataPath = storage_path('data.json'); // Define the correct path
                 file_put_contents($dataPath, $json);
 
-                return view('show',['jsonData' => $json]);
+                // return view('show',['jsonData' => $json]);
 
-                // return redirect()->route('process-data')->with('success', 'Excel file exported successfully.');
+                return redirect()->route('process-data')->with('success', 'Excel file exported successfully.');
     
             } else {
                 return back()->with('error', 'File upload failed.');
