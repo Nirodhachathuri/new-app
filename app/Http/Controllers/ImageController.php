@@ -43,4 +43,20 @@ class ImageController extends Controller
         // return redirect()->back()->with('success', 'Image uploaded successfully.');
         return redirect()->route('image.upload.form')->with('error', 'Image upload failed.');
     }
+
+    public function showImage($filename)
+    {
+        // Build the full path to the image in the public disk.
+        $path = 'public/' . $filename;
+
+        // Check if the file exists in the specified path.
+        if (Storage::disk('local')->exists($path)) {
+            // Get the URL to the image.
+            $url = Storage::url($path);
+
+            return view('show', ['imageUrl' => $url]);
+        }
+
+        return redirect()->route('image.show.upload.form')->with('error', 'Image not found.');
+    }
 }

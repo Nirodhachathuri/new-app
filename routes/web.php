@@ -32,3 +32,5 @@ Route::get('/process-data', 'App\Http\Controllers\DataInsertController@insertDat
 
 
 Route::view('/show', 'show');
+
+Route::get('/images/{filename}', 'App\Http\Controllers\ImageController@showImage')->name('image.show');

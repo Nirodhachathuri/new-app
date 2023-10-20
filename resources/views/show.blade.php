@@ -1,6 +1,3 @@
-<?php
- foreach ($items as $item) {
-    $value = $item['key'];
- }
+<img src="{{ $imageUrl }}" alt="Uploaded Image">
 
 
