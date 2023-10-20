@@ -46,7 +46,8 @@ class DataInsertController extends Controller
             }
 
             $image = clone $template; // Clone the template for each image
-            // dd($jsonData);
+            // gcloud run deploy YOUR_SERVICE_NAME --allow-unauthenticated
+            dd($jsonData);
             $data = '';
 
             foreach ($item as $key => $value) {
