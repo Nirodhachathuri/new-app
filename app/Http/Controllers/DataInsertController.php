@@ -19,7 +19,7 @@ class DataInsertController extends Controller
 
         // Load the template image
         // $templatePath = storage_path('template.jpeg');
-        $template = Image::make(storage_path('template.jpeg'));
+        $template = Image::make(public_path('template.jpeg'));
 
         // Define the directory where the images will be saved
         $outputDirectory = public_path('generated_images');
